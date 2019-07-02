@@ -4,8 +4,10 @@ I defined about 12 narrow ranges of latitudes in order to have a decent selectio
 so that there is equal representation. I specified a maximum of 200 for the function that returned random
 latitude/longitude combinations. 
 
-I did not have any problems with limitations on query. I did not need to you time.sleep(). The 800+ cities all got queried
-in one shot. I repeated this several times and it was successful each time.
+I did not have any problems with limitations on query. The 800+ cities all got queried in one shot. I repeated 
+this several times and it was successful each time. However, on second thought, I went back and added a condition for
+time.sleep() - after every 50 records are searched it goes to sleep for 60 seconds and alerts the user with a print. I did
+this addition just now and therefore I am resubmitting (re-committing).
 
 I noticed that the API call sometimes returned unreasonable values like 319 percent for humidity. Therefore, I 
 deleted data where humidity and cloudiness both of which are reported as "percent" when there were values greater
