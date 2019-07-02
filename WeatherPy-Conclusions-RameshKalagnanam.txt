@@ -1,0 +1,30 @@
+A Few Points about my coding:
+
+I defined about 12 narrow ranges of latitudes in order to have a decent selection of cities across the ranges
+so that there is equal representation. I specified a maximum of 200 for the function that returned random
+latitude/longitude combinations. 
+
+I noticed that the API call sometimes returned unreasonable values like 319 percent for humidity. Therefore, I 
+deleted data where humidity and cloudiness both of which are reported as "percent" when there were values greater
+than 100 percent I also specified a maximum of 140 for the "Max Temp". It is reasonable to expect such high temperatures;
+for example in India, there are locations where such high values are reported albeit for a duration of a few hours
+during summer time.
+
+Conclusions:
+
+1. Maximum temperatures exceeding 90 def F were in areas where the latitudes were in the 20 deg - 30 deg North. This is noticed
+surprising given we are in the beginning of summer and the "more Northern" part of the Northern Hemisphere is directly exposed
+to the Sun. If I expected to find regions such as where India is located to have such high temperatures and could not find
+it is because "summer-like" weather is done there and monsoon has set in now.However, if we were to run this application in 
+end of April to mid-May we will likely run into very hight values in the 10 to 20 deg North region. Another thing to keep in mind
+is - time zones of these cities are different. It was late night in the "traditionally" hot parts of the world when I ran the 
+application. Given this was "current" weather, it is reasonable to not find very high values (exceeding 100 deg F) in the tropical regions.
+We would need to examine the cities and their locations to get more meaningful conclusions. Examining the longitudes of the place will
+tell us where it was night time.
+
+2. Cloudiness is also "all over the place" even within the same latitude range. This tells us that cloudiness is potentially independent 
+of latitude. Weather patterns affecting cloudiness are perhaps as much "east-west" phenomena as they could be "north-south" phenomena.
+
+3. Like, cloudiness, humidity is also "all over the place" even within the same latitude range. Clouds are there because there is humidity.
+Therefore, just like for cloudiness, humidity may be related to "longitudes" of locations.
+
