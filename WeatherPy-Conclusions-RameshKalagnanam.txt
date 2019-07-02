@@ -4,6 +4,9 @@ I defined about 12 narrow ranges of latitudes in order to have a decent selectio
 so that there is equal representation. I specified a maximum of 200 for the function that returned random
 latitude/longitude combinations. 
 
+I did not have any problems with limitations on query. I did not need to you time.sleep(). The 800+ cities all got queried
+in one shot. I repeated this several times and it was successful each time.
+
 I noticed that the API call sometimes returned unreasonable values like 319 percent for humidity. Therefore, I 
 deleted data where humidity and cloudiness both of which are reported as "percent" when there were values greater
 than 100 percent I also specified a maximum of 140 for the "Max Temp". It is reasonable to expect such high temperatures;
